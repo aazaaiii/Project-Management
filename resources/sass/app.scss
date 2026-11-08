@@ -1,0 +1,448 @@
+
+/* ===== JOELL PROJECT DESIGN SYSTEM ===== */
+
+$primary: #3B82F6;
+$light: #EFF6FF;
+$secondary: #64748B;
+$dark: #1E293B;
+$success: #22C55E;
+$warning: #F59E0B;
+$danger: #EF4444;
+
+$font-family-sans-serif: "Poppins", sans-serif;
+
+/* Import cukup satu kali */
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+$font-family-sans-serif: "Poppins", sans-serif;
+
+// Import Bootstrap (setelah variabel di atas, supaya override-nya kepakai)
+@import "bootstrap/scss/bootstrap";
+
+// Import Bootstrap Icons
+@import "bootstrap-icons/font/bootstrap-icons.css";
+$primary:    #3B82F6;
+$light:      #EFF6FF;
+$secondary:  #64748B;
+$dark:       #1E293B;
+$success:    #22C55E;
+$warning:    #F59E0B;
+$danger:     #EF4444;
+
+$font-family-sans-serif: "Poppins", sans-serif;
+
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+// ===== CUSTOM ENHANCEMENTS =====
+
+// Transisi halus untuk semua elemen interaktif
+a, .btn, .card, .nav-link, .form-control, .form-select {
+    transition: all 0.2s ease-in-out;
+}
+
+// Card lebih "hidup" saat di-hover
+.card {
+    border-radius: 14px;
+}
+
+.card.shadow-sm:hover {
+    box-shadow: 0 0.75rem 1.5rem rgba(59, 130, 246, 0.12) !important;
+    transform: translateY(-3px);
+}
+
+// Card berisi modal/tabel tidak boleh "melayang" (transform bikin modal loncat & berkedip)
+.card:has(.modal),
+.card:has(.modal):hover,
+.card:has(.table-responsive),
+.card:has(.table-responsive):hover {
+    transform: none !important;
+}
+
+// Modal tidak mewarisi text-end dari kolom tabel
+.modal {
+    text-align: left;
+}
+
+// Kecualikan card yang tidak butuh efek hover (misal card statis form)
+.card:has(form):hover {
+    transform: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075) !important;
+}
+
+// Tombol lebih responsif
+.btn {
+    font-weight: 500;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn-primary {
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+    transform: translateY(-1px);
+}
+
+// Sidebar admin/customer - link lebih hidup
+.nav-pills .nav-link {
+    border-radius: 10px;
+    color: $dark;
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+    background-color: $light;
+    color: $primary;
+    padding-left: 1.1rem;
+}
+
+.nav-pills .nav-link.active {
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+// Table row hover
+.table tbody tr {
+    transition: background-color 0.15s ease-in-out;
+}
+
+.table tbody tr:hover {
+    background-color: $light;
+}
+
+// Form focus state lebih jelas
+.form-control:focus, .form-select:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.15);
+}
+
+// Navbar public - shadow lebih halus saat scroll
+.navbar.sticky-top {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+// Portfolio & service card - gambar zoom halus saat hover
+.card img.card-img-top {
+    transition: transform 0.35s ease;
+    overflow: hidden;
+}
+
+.card:hover img.card-img-top {
+    transform: scale(1.05);
+}
+
+// Badge lebih tebal dan rapi
+.badge {
+    font-weight: 500;
+    padding: 0.4em 0.75em;
+    border-radius: 8px;
+}
+
+// Progress bar lebih halus animasinya
+.progress-bar {
+    transition: width 0.6s ease;
+}
+
+// Scrollbar custom (opsional, tampilan lebih modern)
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: $light;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #93C5FD;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $primary;
+}
+
+// Fade-in halus untuk konten utama tiap halaman
+main, .card-body {
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+// ===== VISUAL ENHANCEMENTS TAHAP 2 =====
+
+// Hero section - gradient lembut + pattern halus
+.hero-gradient {
+    background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 50%, #EFF6FF 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+// Tombol CTA dengan gradient + efek glow
+.btn-primary {
+    background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+}
+
+// Stat card dashboard - icon dengan gradient bulat + shadow warna
+.icon-gradient-primary {
+    background: linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%) !important;
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+}
+
+.icon-gradient-primary i { color: white !important; }
+
+.icon-gradient-success {
+    background: linear-gradient(135deg, #22C55E 0%, #4ADE80 100%) !important;
+    box-shadow: 0 6px 16px rgba(34, 197, 94, 0.3);
+}
+
+.icon-gradient-success i { color: white !important; }
+
+.icon-gradient-warning {
+    background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%) !important;
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.3);
+}
+
+.icon-gradient-warning i { color: white !important; }
+
+.icon-gradient-danger {
+    background: linear-gradient(135deg, #EF4444 0%, #F87171 100%) !important;
+    box-shadow: 0 6px 16px rgba(239, 68, 68, 0.3);
+}
+
+.icon-gradient-danger i { color: white !important; }
+
+// CTA banner full color - tambah tekstur halus
+.cta-banner {
+    background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+// Portfolio/testimonial card - border halus + hover lebih dramatis
+.card.border-0.shadow-sm {
+    border: 1px solid rgba(0,0,0,0.04) !important;
+}
+
+// Section heading - underline aksen kecil
+.section-title::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: $primary;
+    border-radius: 2px;
+    margin-top: 8px;
+}
+
+.text-center .section-title::after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// ===== VISUAL ENHANCEMENTS TAHAP 3 =====
+
+// Avatar/icon bulat dengan ring halus
+.rounded-circle.bg-primary.bg-opacity-10 {
+    border: 2px solid rgba(59, 130, 246, 0.15);
+}
+
+// Card portofolio & testimoni - shadow lebih lembut & elegan
+.card.border-0.shadow-sm {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+// Numbered step (Cara Kerja) - shadow warna + hover scale
+.rounded-circle.bg-primary.text-white.fw-bold {
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.25);
+    transition: transform 0.25s ease;
+}
+
+.rounded-circle.bg-primary.text-white.fw-bold:hover {
+    transform: scale(1.1);
+}
+
+// Badge status dengan sedikit glow sesuai warna
+.badge.bg-success { box-shadow: 0 2px 8px rgba(34, 197, 94, 0.25); }
+.badge.bg-warning { box-shadow: 0 2px 8px rgba(245, 158, 11, 0.25); }
+.badge.bg-danger  { box-shadow: 0 2px 8px rgba(239, 68, 68, 0.25); }
+.badge.bg-primary { box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25); }
+
+// Footer - sedikit gradient gelap, bukan flat
+footer {
+    background: linear-gradient(180deg, #1E293B 0%, #0F172A 100%) !important;
+}
+
+// Link navbar aktif - underline halus alih-alih cuma warna
+.navbar-nav .nav-link.active {
+    position: relative;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: $primary;
+    border-radius: 2px;
+}
+
+// Empty state (data kosong) - lebih ramah, ikon dengan warna lembut
+.bi-inbox, .bi-calendar-check-fill.fs-1 {
+    color: #CBD5E1;
+}
+
+// Sidebar - logo section dengan sedikit gradient
+aside .border-bottom {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+}
+
+
+/* ===== JOELL PROJECT — UI REFINEMENT ===== */
+
+/* Warna teks tombol */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    color: #FFFFFF !important;
+}
+
+.btn-primary i,
+.btn-primary svg {
+    color: #FFFFFF !important;
+}
+
+/* Tombol outline tetap jelas dan elegan */
+.btn-outline-primary {
+    border-width: 1.5px;
+    font-weight: 600;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    color: #FFFFFF !important;
+}
+
+/* Bentuk tombol lebih konsisten */
+.btn {
+    border-radius: 12px;
+    font-weight: 600;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3B82F6, #2563EB);
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2563EB, #1D4ED8);
+    box-shadow: 0 7px 18px rgba(59, 130, 246, 0.28);
+    transform: translateY(-1px);
+}
+
+/* Form lebih bersih */
+.form-control,
+.form-select {
+    border-radius: 10px;
+    border-color: #D8E3F0;
+    padding: 0.7rem 0.9rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 0.22rem rgba(59, 130, 246, 0.13);
+}
+
+/* Card profesional */
+.card {
+    border-radius: 16px;
+    border-color: #E8EEF7;
+}
+
+.card.shadow-sm {
+    box-shadow: 0 4px 18px rgba(30, 41, 59, 0.06) !important;
+}
+
+.card.shadow-sm:hover {
+    box-shadow: 0 10px 28px rgba(59, 130, 246, 0.12) !important;
+}
+
+/* Tabel lebih nyaman dibaca */
+.table {
+    --bs-table-hover-bg: #EFF6FF;
+}
+
+.table thead th {
+    color: #64748B;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    border-bottom-color: #E2E8F0;
+}
+
+.table td {
+    border-bottom-color: #EEF2F7;
+}
+
+/* Badge lebih rapi */
+.badge {
+    font-weight: 600;
+    padding: 0.45em 0.75em;
+    border-radius: 8px;
+}
+
+/* Aksesibilitas: kurangi animasi bila diminta perangkat */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
