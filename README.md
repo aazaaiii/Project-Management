@@ -1,59 +1,286 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+JOELL_PROJECT
+Website Manajemen Renovasi Rumah
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Tentang Proyek
+JOELL_PROJECT adalah aplikasi berbasis website untuk membantu pengelolaan layanan renovasi rumah, mulai dari penyampaian informasi layanan, booking konsultasi, pengelolaan pelanggan, manajemen proyek renovasi, pemantauan progres pekerjaan, pembayaran, hingga dokumentasi hasil pekerjaan melalui portofolio.
 
-## About Laravel
+Aplikasi ini memiliki pembagian hak akses berdasarkan peran pengguna:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+| Peran | Tanggung Jawab |
+|---|---|
+| Admin | Mengelola data pelanggan, booking, proyek, progres, pembayaran, portofolio, dan testimoni |
+| Customer | Melakukan booking konsultasi, melihat informasi proyek, memantau progres, dan melihat pembayaran |
+| Pengunjung | Melihat informasi perusahaan, layanan, portofolio, dan testimoni |
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Fitur Utama
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Website profil perusahaan dan informasi layanan renovasi rumah.
+- Registrasi dan login customer.
+- Dashboard admin dan customer berdasarkan hak akses.
+- Booking konsultasi renovasi rumah.
+- Manajemen data pelanggan.
+- Manajemen proyek renovasi.
+- Pemantauan status dan progres proyek.
+- Upload foto perkembangan proyek.
+- Manajemen pembayaran.
+- Manajemen portofolio hasil renovasi.
+- Manajemen testimoni pelanggan.
+- Pembatasan akses halaman berdasarkan role pengguna.
 
-## Learning Laravel
+Penjelasan Fitur Berdasarkan Hak Akses
+JOELL_PROJECT menyediakan fitur berdasarkan kebutuhan masing-masing pengguna, yaitu Admin, Customer, dan Pengunjung. Setiap pengguna memiliki hak akses dan fungsi yang berbeda.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+1. Pengunjung
+Pengunjung merupakan pengguna yang belum login dan dapat mengakses informasi umum mengenai JOELL_PROJECT.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Beranda
+Menampilkan informasi utama perusahaan, gambaran layanan renovasi, serta bagian-bagian penting untuk membantu pengunjung mengenal JOELL_PROJECT.
 
-## Laravel Sponsors
+Tentang Kami
+Menampilkan informasi mengenai perusahaan, profil, dan gambaran usaha renovasi rumah.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Layanan
+Menampilkan jenis layanan renovasi rumah yang tersedia beserta informasi dan deskripsinya.
 
-### Premium Partners
+Cara Kerja
+Menjelaskan tahapan proses layanan renovasi, mulai dari konsultasi hingga penyelesaian pekerjaan.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Portofolio
+Menampilkan dokumentasi hasil pekerjaan renovasi yang telah dilakukan. Portofolio dapat dikelompokkan berdasarkan kategori:
 
-## Contributing
+- Rumah 2 Lantai
+- Interior
+- Kitchen Set
+- Kamar Mandi
+- Lainnya
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Testimoni
+Menampilkan ulasan dan pengalaman pelanggan terhadap layanan JOELL_PROJECT.
 
-## Code of Conduct
+Booking Konsultasi
+Menyediakan akses bagi pengunjung untuk melakukan booking konsultasi dengan membuat akun atau login terlebih dahulu.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+2. Admin
+Admin bertanggung jawab mengelola data dan aktivitas yang berlangsung dalam aplikasi JOELL_PROJECT.
 
-## Security Vulnerabilities
+Dashboard Admin
+Menampilkan ringkasan informasi operasional, seperti:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Total customer.
+- Total booking.
+- Total proyek.
+- Proyek yang sedang dikerjakan.
+- Informasi booking berdasarkan status.
+Dashboard membantu admin memantau aktivitas aplikasi melalui satu halaman.
 
-## License
+Manajemen Customer
+Digunakan untuk melihat dan mengelola data pelanggan yang telah terdaftar dalam sistem.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Data customer berkaitan dengan informasi akun dan identitas pelanggan yang dibutuhkan dalam proses booking dan pengelolaan proyek.
+
+Manajemen Booking
+Digunakan untuk melihat dan mengelola permintaan booking konsultasi dari customer.
+
+Informasi booking meliputi:
+
+- Nama customer.
+- Email.
+- Nomor WhatsApp.
+- Alamat.
+- Jenis layanan.
+- Tanggal survey.
+- Pesan atau keterangan.
+- Status booking.
+
+Admin dapat memantau dan memperbarui status booking sesuai proses penanganannya.
+
+Manajemen Proyek
+
+Digunakan untuk mengelola proyek renovasi yang dikerjakan untuk customer.
+
+Admin dapat mengatur informasi proyek, menghubungkan proyek dengan customer, serta memperbarui informasi dan status pengerjaan.
+
+Manajemen Progres Proyek
+Digunakan untuk mencatat perkembangan pekerjaan renovasi.
+Admin dapat mengelola informasi progres dan dokumentasi foto agar customer dapat mengetahui perkembangan proyeknya.
+
+Manajemen Pembayaran
+Digunakan untuk mengelola informasi pembayaran proyek renovasi, termasuk pencatatan dan pemantauan status pembayaran.
+
+Manajemen Portofolio
+Digunakan untuk mengelola dokumentasi hasil pekerjaan renovasi yang ditampilkan pada halaman publik.
+
+Informasi portofolio meliputi:
+
+- Judul portofolio.
+- Kategori.
+- Deskripsi.
+- Lokasi.
+- Luas bangunan.
+- Tahun pengerjaan.
+- Status publikasi.
+- Thumbnail.
+- Galeri foto.
+
+Manajemen Testimoni
+Digunakan untuk mengelola testimoni pelanggan yang akan ditampilkan pada halaman website.
+
+3. Customer
+Customer merupakan pengguna yang telah memiliki akun dan dapat mengakses dashboard pelanggan.
+
+Registrasi dan Login
+Customer dapat membuat akun dan login untuk menggunakan fitur yang tersedia pada dashboard.
+
+Dashboard Customer
+Menampilkan informasi mengenai aktivitas customer, seperti booking konsultasi dan informasi proyek renovasi yang sedang dikerjakan.
+
+Booking Konsultasi
+Customer dapat mengajukan konsultasi renovasi dengan mengisi informasi:
+
+- Jenis layanan.
+- Tanggal survey.
+- Pesan tambahan jika diperlukan.
+
+Informasi identitas customer diambil dari akun yang sedang login sehingga tidak perlu diisi kembali.
+
+Informasi Proyek
+Customer dapat melihat informasi proyek renovasi yang terhubung dengan akunnya.
+
+Progres Proyek
+Customer dapat memantau perkembangan pekerjaan renovasi berdasarkan informasi progres dan dokumentasi foto yang diberikan admin.
+
+Informasi Pembayaran
+Customer dapat melihat informasi pembayaran yang berkaitan dengan proyek renovasinya.
+
+Testimoni
+Customer dapat memberikan ulasan mengenai pengalaman menggunakan layanan JOELL_PROJECT.
+
+Bahasa Pemrograman dan Teknologi
+
+| Teknologi | Keterangan |
+|---|---|
+| PHP | Bahasa pemrograman backend |
+| Laravel | Framework pengembangan aplikasi |
+| MySQL | Sistem manajemen database |
+| HTML | Struktur halaman website |
+| CSS | Pengaturan tampilan website |
+| JavaScript | Interaksi pada halaman website |
+| Blade | Template engine Laravel |
+
+Struktur Proyek
+
+Project-Management/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   ├── Middleware/
+│   │   └── Requests/
+│   └── Models/
+├── bootstrap/
+├── config/
+├── database/
+│   ├── migrations/
+│   └── seeders/
+├── public/
+├── resources/
+│   └── views/
+│       ├── admin/
+│       ├── customer/
+│       ├── layouts/
+│       └── public/
+├── routes/
+│   └── web.php
+├── storage/
+├── tests/
+├── .env.example
+├── .gitignore
+├── artisan
+├── composer.json
+└── README.md
+```
+
+Kebutuhan Sistem
+
+- Windows 10 atau Windows 11.
+- PHP 8.3 atau versi yang sesuai dengan kebutuhan project.
+- Composer.
+- MySQL.
+- Node.js dan NPM.
+- Laragon atau web server lokal lainnya.
+- Browser seperti Google Chrome atau Microsoft Edge.
+- Visual Studio Code sebagai code editor.
+
+Cara Menjalankan Aplikasi
+
+1. Clone Repository
+bash
+git clone https://github.com/aazaaiii/Project-Management.git
+
+2. Masuk ke Folder Project
+bash
+cd Project-Management
+
+3. Install Dependency
+Install dependency Laravel menggunakan Composer dan dependency frontend menggunakan NPM.
+bash
+composer install
+npm install
+
+4. Konfigurasi Environment
+
+Salin file `.env.example` menjadi `.env`.
+
+Untuk Windows CMD:
+bash
+copy .env.example .env
+Buat database dengan nama `projek_pkk` melalui MySQL atau phpMyAdmin.
+Selanjutnya, sesuaikan konfigurasi database dan akun admin pada file `.env`.
+.env
+APP_NAME="JOELL PROJECT"
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=projek_pkk
+DB_USERNAME=root
+DB_PASSWORD=
+
+ADMIN_EMAIL=
+ADMIN_PASSWORD=
+
+Isi `ADMIN_EMAIL` dan `ADMIN_PASSWORD` dengan email dan password admin yang ingin digunakan.
+
+5. Generate Application Key
+bash
+php artisan key:generate
+
+6. Migrasi Database
+Pastikan MySQL sudah berjalan, kemudian jalankan:
+bash
+php artisan migrate --seed
+Perintah ini digunakan untuk membuat tabel database dan menjalankan seeder.
+
+7. Membuat Storage Link
+bash
+php artisan storage:link
+Perintah ini digunakan agar file gambar yang disimpan melalui Laravel dapat diakses dari halaman website.
+
+8. Build Frontend
+bash
+npm run build
+Perintah ini digunakan untuk membangun aset frontend aplikasi.
+
+9. Menjalankan Aplikasi
+
+bash
+php artisan serve
+
+Buka browser dan akses alamat berikut:
+http://127.0.0.1:8000
+
+Catatan
+
+- Aplikasi menggunakan sistem autentikasi dengan pembagian hak akses Admin dan Customer.
+- Pendaftaran akun admin tidak tersedia secara publik.
+- Data layanan ditampilkan secara statis pada halaman website.
+- Foto portofolio dan dokumentasi progres dikelola melalui dashboard admin.
+- Konfigurasi rahasia aplikasi disimpan dalam file `.env` dan tidak disertakan dalam repository.
